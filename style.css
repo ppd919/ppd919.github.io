@@ -1,0 +1,265 @@
+html {
+  /* 드래그 방지 */
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 800vh;
+  background-color: black;
+  border-left: 5px solid tomato;
+  box-sizing: border-box;
+}
+
+.bg {
+  width: 90vw;
+  height: 800vh;
+  position: absolute;
+  left: 10px;
+  border-left: 5px solid dodgerblue;
+  z-index: -1;
+}
+
+/* Main - Section 01*/
+#main_top {
+  position: absolute;
+  width: 90vw;
+  margin: 0 0 0 5%;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+#main_top > h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  padding-left: 15px;
+  letter-spacing: -1.5px;
+}
+
+#main_title {
+  height: 100vh;
+  margin: 0 0 0 5%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.inner {
+  font-family: 'Nanum Myeongjo', serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 50%;
+  height: 100%;
+  transform: translateY(-120px);
+}
+
+#main_title>.inner>.line1>div {
+  font-size: 85px;
+  letter-spacing: -5px;
+}
+
+#main_title>.inner>.line2>div {
+  font-size: 60px;
+  letter-spacing: -5px;
+}
+
+#main_title>.inner>.line3>div {  
+  font-size: 60px;
+}
+
+#main_title>.inner>.line4>div {
+  font-size: 15px;
+  letter-spacing: -1.5px;
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 2px solid white;
+}
+
+.line1, .line2, .line3, .line4 {
+  padding-left: 15px;
+  font-weight: 400;
+  animation: title_fadein 3s ease-in-out;
+}
+
+@keyframes title_fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Section 02 */
+#sec2 {
+  height: 100vh;
+  margin: 0 0 0 5%;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+}
+
+#sec2>.inner>.line1>div {
+  font-size: 75px;
+  letter-spacing: -7px;
+}
+
+#sec2>.inner>.line2 {
+  border-left: 2px solid brown;
+}
+
+
+#sec2>.inner>.line2>div {
+  font-size: 20px;
+  letter-spacing: -2px;
+}
+
+#img_sec2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20%;
+  transform: translateY(-80px);
+}
+
+figcaption {
+  font-family: 'Nanum Myeongjo', serif;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Section 03 ~ Section 07 */
+#sec3, #sec4, #sec5, #sec6, #sec7 {
+  height: 100vh;
+  margin: 0 0 0 5%;
+  display: flex;
+  font-family: 'Nanum Myeongjo', serif;
+  color: white;
+}
+
+.inner_left {
+  font-family: 'Nanum Myeongjo', serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 40%;
+  height: 100%;
+  transform: translateY(-120px);
+}
+
+.inner_left>.line1 {
+  font-size: 60px;
+  letter-spacing: -7px;
+}
+
+.inner_left>.line2 {
+  font-size: 16px;
+  letter-spacing: -1.5px;
+  border-left: 2px solid brown;
+  margin-top: 10px;
+}
+
+.inner_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10%;
+  color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-120px);
+}
+
+.country {
+  display: flex;
+  margin-bottom: 20px;
+  opacity: 1;
+}
+
+.country > div{
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin-right: 30px;
+  transition: all 0.25s;
+}
+
+.country>div:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 1px gray;
+  transform: translateX(1px);
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+
+.btn_active {
+  color: rgba(255, 20, 147, 1);
+  text-shadow: 1px 1px 1px gray;
+  transform: translateX(1px);
+  transform: translateY(-1px);
+}
+
+.btn_inactive {
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.country>div.btn_active:hover {
+  color: rgba(255, 20, 147, 1);
+}
+
+.country>div.btn_inactive:hover{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.data {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0);
+  padding-left: 10px;
+  transition: all 0.7s ease-in-out;
+}
+
+/* Section last */
+#last {
+  height: 100vh;
+  margin: 0 0 0 5%;
+  display: flex;
+  font-family: 'Nanum Myeongjo', serif;
+  color: white;
+}
+
+/* 네비게이션 스타일 */
+nav>ul {
+  list-style: none;
+  position: fixed;
+  top: 65%;
+  left: 5%;
+  padding-left: 15px;
+  font-family: 'Nanum Myeongjo', serif;
+  border-left: 2px solid white;
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+nav>ul>li {
+  margin-bottom: 7px;
+}
+
+.nav_active {
+  color: rgba(255, 255, 255, 1);
+  text-decoration-color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 1px gray;
+}
+
+.nav_inactive {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration-color: rgba(255, 255, 255, 0);
+}
